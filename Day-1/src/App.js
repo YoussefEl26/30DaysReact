@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <body>
+    
+    <div id="couleur"></div>
+    <div id="slider">
+      <input type='range' id="red" name="red" min="0" max="256"/>
+      <label for="red">Rouge</label>
+      <input type='range' id="green" name="green" min="0" max="256"/>
+      <label for="green">Vert</label>
+      <input type='range' id="blue" name="blue" min="0" max="256"/>
+      <label for="blue">Bleu</label>
+      <input type='range' id="bw" name="bw" min="0" max="256"/>
+      <label for="bw">Opacité</label>
     </div>
+    
+    </body>
+    
   );
 }
 

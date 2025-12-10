@@ -20,7 +20,11 @@ export default function App() {
   const [color, setColor] = useState("beige")
   const click = () => { 
 
-    let mix = '#'+'11'+'11'+'11'
+    let hex0 = test.tostring(16); 
+    let hex1 = test.tostring(16); 
+    let hex2 = test.tostring(16); 
+
+    let mix = '#'+hex0+hex1+hex2
     setColor(mix)
   }
 
@@ -33,11 +37,11 @@ export default function App() {
     <div className="bg-stone-800" >
 
       <div>
-        <Scroller value={colors[0]}/>
+        <Scroller id="0" value={colors[0]}/>
         {colors[0]}
-        <Scroller value={colors[1]}/> 
+        <Scroller id="1" value={colors[1]}/> 
         {colors[1]}
-        <Scroller value={colors[2]}/> 
+        <Scroller id="2" value={colors[2]}/> 
         {colors[2]}
         <button onClick ={() => click()}>Change color</button>
         

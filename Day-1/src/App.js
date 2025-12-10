@@ -2,30 +2,27 @@ import './App.css';
 
 import React, { useState, useEffect } from 'react'
 
-function Scroller(){
-  const [chiffre, setChiffre] = useState('');
+function Scroller({value, onChange}){
   return (
-    <>
     <div>
-      <input type="range" onChange={e => setChiffre(e.target.value)} min="0" max="256"></input>
-      {chiffre}
+      <input type="range"  min="0" max="255" value={value} onChange={e => onChange(Number(e.target.value))}></input>
+      <span style={{ marginLeft: "10px" }}>{value}</span>
     </div>
-    </>
     );
 }
 
 // Main App
 export default function App() {
-  const [colors] = useState(Array(3).fill(0))
-  const [color, setColor] = useState("beige")
+  const [colors, setColors] = useState([0,0,0]);
+  const [color, setColor] = useState("beige");
   const click = () => { 
 
-    let hex0 = test.tostring(16); 
-    let hex1 = test.tostring(16); 
-    let hex2 = test.tostring(16); 
+    let hex0 = colors[0].toString(16).padStart(2, "0");
+    let hex1 = colors[1].toString(16).padStart(2, "0");
+    let hex2 = colors[2].toString(16).padStart(2, "0");
 
-    let mix = '#'+hex0+hex1+hex2
-    setColor(mix)
+    const hex = '#'+hex0+hex1+hex2
+    setColor(hex)
   }
 
   useEffect(()=>{
@@ -34,17 +31,14 @@ export default function App() {
 
 
   return (
-    <div className="bg-stone-800" >
+    <div>
 
       <div>
-        <Scroller id="0" value={colors[0]}/>
-        {colors[0]}
-        <Scroller id="1" value={colors[1]}/> 
-        {colors[1]}
-        <Scroller id="2" value={colors[2]}/> 
-        {colors[2]}
+        <Scroller value={colors[0]} onChange={(v) => setColors([v, colors[1], colors[2]])}/> 
+
+        <Scroller value={colors[1]} onChange={(v) => setColors([colors[0], v, colors[2]])}/> 
+        <Scroller value={colors[2]} onChange={(v) => setColors([colors[0], colors[1], v])}/> 
         <button onClick ={() => click()}>Change color</button>
-        
       </div>
     </div>
   )

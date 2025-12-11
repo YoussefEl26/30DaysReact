@@ -1,48 +1,43 @@
 import { useState } from 'react';
 import './App.css';
 
-function Touche({value, onChange}){
 
-  
-
-  return(
-      <button className="touche" >{value}</button>
-  )
-}
 function App() {
-  const [resultat, setResultat] = useState('5252');
+  const [resultat, setResultat] = useState('');
 
 
   return (
     <div className="App">
       <div className='Result Row'>
-          {resultat}
+          <input type="text" value={resultat}></input>
       </div>
-      <div className='First Row'>
-        <Touche value='/' onClick={console.log("de")}/>
-        <Touche value='*'/>
-        <Touche value='-'/>
-        <Touche value='+'/>
 
+      <div className='First Row'>
+        <input type="button" value='/' onClick={e => setResultat(resultat + e.target.value)}/>
+        <input type="button" value='*' onClick={e => setResultat(resultat + e.target.value)}/>
+        <input type="button" value='-' onClick={e => setResultat(resultat + e.target.value)}/>
+        <input type="button" value='+' onClick={e => setResultat(resultat + e.target.value)}/>
       </div>
+
       <div  className='Second Row'>
-        <Touche value='7' onClick={(v) => console.log(v)}/>
-        <Touche value='8' onClick={(v) => console.log(v)}/>
-        <Touche value='9' onClick={(v) => console.log(v)}/>
-        <Touche value='E' onClick={(v) => console.log(v)}/>
-        
+        <input type="button" value='7' onClick={e => setResultat(resultat + e.target.value)}/>
+        <input type="button" value='8' onClick={e => setResultat(resultat + e.target.value)}/>
+        <input type="button" value='9' onClick={e => setResultat(resultat + e.target.value)}/>
+        <input type="button" value='=' onClick={e => setResultat(eval(resultat))}/>
       </div>
-      <div  className='Thrid Row'>
-        <Touche value='4'/>
-        <Touche value='5'/>
-        <Touche value='6'/>
-        <Touche value='.'/>
+
+      <div  className='Third Row'>
+        <input type="button" value='4' onClick={e => setResultat(resultat + e.target.value)}/>
+        <input type="button" value='5' onClick={e => setResultat(resultat + e.target.value)}/>
+        <input type="button" value='6' onClick={e => setResultat(resultat + e.target.value)}/>
+        <input type="button" value='.' onClick={e => setResultat(resultat + e.target.value)}/>
       </div>
+
       <div  className='Fourth Row'>
-        <Touche value='1'/>
-        <Touche value='2'/>
-        <Touche value='3'/>
-        <Touche value='0'/>
+        <input type="button" value='1' onClick={e => setResultat(resultat + e.target.value)}/>
+        <input type="button" value='2' onClick={e => setResultat(resultat + e.target.value)}/>
+        <input type="button" value='3' onClick={e => setResultat(resultat + e.target.value)}/>
+        <input type="button" value='0' onClick={e => setResultat(resultat + e.target.value)}/>
       </div>
       
       

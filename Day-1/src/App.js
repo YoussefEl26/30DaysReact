@@ -15,6 +15,7 @@ function Scroller({value, onChange}){
 export default function App() {
   const [colors, setColors] = useState([0,0,0]);
   const [color, setColor] = useState("beige");
+  
   const click = () => { 
 
     let hex0 = colors[0].toString(16).padStart(2, "0");

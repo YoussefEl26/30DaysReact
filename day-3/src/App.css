@@ -1,38 +1,112 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10% 0px 0px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.Fond{
+  width: 1000px;
+  height: 400px;
+  background-color: gray;
+  border: 2px solid rgb(95 97 110);
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.FirstDigit{
+  width: 200px;
+  height: 300px;
+  background-color: rgb(72, 72, 72);
+  border: 2px solid rgb(95 97 110);
+  margin: 50px 0px 0px 40px;
+  display: float;
+}
+.SecondDigit{
+  width: 200px;
+  height: 300px;
+  background-color: rgb(72, 72, 72);
+  border: 2px solid rgb(95 97 110);
+  margin: 50px 0px 0px 25px;
+}
+.ThirdDigit{
+  width: 200px;
+  height: 300px;
+  background-color: rgb(72, 72, 72);
+  border: 2px solid rgb(95 97 110);
+  margin: 50px 0px 0px 50px;
+}
+.FourthDigit{
+  width: 200px;
+  height: 300px;
+  background-color: rgb(72, 72, 72);
+  border: 2px solid rgb(95 97 110);
+  margin: 50px 0px 0px 25px;
+}
+
+.Branche1{
+  margin: 10px 0px 0px 50px;
+  width: 100px;
+  height: 25px;
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 5%;
+  position: absolute;
+}
+.Branche2{
+  margin: 40px 0px 0px 10px;
+  width: 25px;
+  height: 100px;
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 5%;
+  position: absolute;
+}
+.Branche3{
+  margin: 40px 0px 0px 160px;
+  width: 25px;
+  height: 100px;
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 5%;
+  position: absolute;
+}
+.Branche4{
+  margin: 140px 0px 0px 50px;
+  width: 100px;
+  height: 25px;
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 5%;
+  position: absolute;
+}
+.Branche5{
+  margin: 160px 0px 0px 10px;
+  width: 25px;
+  height: 100px;
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 5%;
+  position: absolute;
+}
+.Branche6{
+  margin: 160px 0px 0px 160px;
+  width: 25px;
+  height: 100px;
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 5%;
+  position: absolute;
+}
+.Branche7{
+  margin: 265px 0px 0px 50px;
+  width: 100px;
+  height: 25px;
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 5%;
+  position: absolute;
 }

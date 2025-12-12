@@ -1,23 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
 
+function Numero(temps){
+  console.log(temps)
+  return(
+    <div>
+      <div className='Branche1'></div>
+      <div className='Branche2'></div>
+      <div className='Branche3'></div>
+      <div className='Branche4'></div>
+      <div className='Branche5'></div>
+      <div className='Branche6'></div>
+      <div className='Branche7'></div>
+    </div>
+  )
+}
+
 function App() {
+  const today = new Date();
+  const showHours = today.getHours();
+  const showMinutes = today.getMinutes();
+  console.log(showHours);
+  console.log(showMinutes);
+
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Fond">
+        <div className='FirstDigit'>
+          <Numero temps={showHours[0]}/>
+          
+        </div>
+        <div className='SecondDigit'>
+          <Numero temps={showHours[1]}/>
+        </div>
+        <div className='ThirdDigit'>
+          <Numero temps={showMinutes[0]}/>
+        </div>
+        <div className='FourthDigit'>
+          <Numero temps={showMinutes[1]}/>
+        </div>
+      </div>      
     </div>
   );
 }
